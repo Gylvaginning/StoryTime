@@ -1,9 +1,6 @@
 // Import classes
 import java.io.File;
 
-/* The "driver" file of the directory, this file will be
- responsible for the program execution.
- */
 public class MyStory {
     // A method responsible for retrieving stories chosen.
     static void story1() {
@@ -18,15 +15,18 @@ public class MyStory {
     // Such as for example:
     /*
         Practice Java File Handling, Java I/O Streams
-        1) Create a file and write (dynamically?) a short story to it
+        1) Make a CreateFile class and make an object from this class which performs step 2)
+        .... <><>
+        2) Create a file and write (dynamically?) a short story to it
         Practice Java String manipulation
         2) Read each word from the file as an Array and replace every
          occurrence of the letter "o" with "0"
     */
 
-    static void createFile() {
 
-    }
+    /* The "driver" file of the directory, this file will be
+     responsible for the program execution.
+     */
     public static void main(String [] args) {
         // Create a MyStory object:
             //MyStory storyContainer = new MyStory();
@@ -36,6 +36,10 @@ public class MyStory {
         /*
         Let us do some fun stuff.
          */
+        FileHandle FileObject = new FileHandle();
+        if(FileObject.fileCreation()) {
+            FileObject.writeFile();
+        }
 
     }
 }
