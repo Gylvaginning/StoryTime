@@ -27,19 +27,18 @@ public class MyStory {
     /* The "driver" file of the directory, this file will be
      responsible for the program execution.
      */
-    public static void main(String [] args) {
+    public static void main(String[] args) {
         // Create a MyStory object:
-            //MyStory storyContainer = new MyStory();
+        //MyStory storyContainer = new MyStory();
         // Where my program is run.
         //story1();
         //System.out.println(newMethod());
         /*
         Let us do some fun stuff.
          */
-        FileHandle FileObject = new FileHandle();
-        if(FileObject.fileCreation()) {
-            FileObject.writeFile();
-        }
-
+        FileHandle FileObject = new FileHandle(); // Make an object of the FileHandle class named FileObject
+        String filename = FileObject.fileCreation(); // The returned String variable of the fileCreation() method is put into the variable filename
+        System.out.println(filename);
+        FileObject.writeFile(filename);
     }
 }
